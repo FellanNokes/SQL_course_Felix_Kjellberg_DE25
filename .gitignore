@@ -3,6 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# SQL duckdb
+*.wal
+*.duckdb
+
 # C extensions
 *.so
 
