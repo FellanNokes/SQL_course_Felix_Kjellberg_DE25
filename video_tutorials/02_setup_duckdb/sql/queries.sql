@@ -1,10 +1,23 @@
-SELECT * FROM videos;
+SELECT
+  *
+FROM
+  videos;
 
-FROM videos;
+FROM
+  videos;
 
-SELECT * FROM videos OFFSET 1;
+SELECT
+  *
+FROM
+  videos
+OFFSET
+  1;
 
-SELECT 
+SELECT
   * exclude (innehåll)
-FROM videos 
-WHERE Visningar > 300 OFFSET 1;
+FROM
+  videos
+WHERE
+  Visningar > 300
+OFFSET
+  1;
