@@ -5,5 +5,5 @@ CREATE TABLE
         SELECT
             *
         FROM
-            read_csv_auto ('data/joined_tables.csv')
+            read_csv_auto ('data/joined_table.csv')
     );
