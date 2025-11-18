@@ -43,12 +43,41 @@ SELECT * FROM staging.employees;
 -- Ignores the first 10
 -- OFFSET 10;
 
-/* ==============
+/* =============
    CRUD - UPDATE
-   ============== */
+   ============= */
 
 -- modify existing data
 UPDATE staging.employees
 SET employement_year = 2023
 WHERE employee_id IN (98,99);
 -- WHERE employee_id = 98 OR employee_id = 99;
+
+/* ===========
+   DDL - Alter
+   =========== */
+
+ALTER TABLE staging.employees
+ADD COLUMN pension_plan VARCHAR DEFAULT 'plan 1'
+
+/* =============
+   CRUD - UPDATE
+   ============= */
+
+UPDATE staging.employees
+SET pension_plan = 'plan 2'
+WHERE employement_year > 2015
+
+/* =============
+   CRUD - DELETE
+   ============= */
+-- always check the rows you plan to delete first
+
+SELECT *
+FROM staging.employees
+WHERE employee_id = 1;
+
+DELETE
+FROM staging.employees
+WHERE employee_id = 1;
+
