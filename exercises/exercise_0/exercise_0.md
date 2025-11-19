@@ -99,6 +99,9 @@ These study questions are good to get an overview of how SQL and relational data
 
 &nbsp; c) Explain the purpose of the LIMIT or OFFSET clause in a SQL query.
 
+LIMIT is used to limit the amount of rows show
+OFFSET will exclude amount of rows 
+
 &nbsp; d) What are the primary functions of the Data Definition Language (DDL) in SQL?
 
 &nbsp; e) Explain the differences between the Data Manipulation Language (DML) and Data Definition Language (DDL).
@@ -108,6 +111,9 @@ These study questions are good to get an overview of how SQL and relational data
 &nbsp; g) Is DuckDB suitable for real-time data processing?
 
 &nbsp; h) Difference between read_csv and read_csv_auto
+
+read_csv_auto automatically names the columns
+read_csv you select the columns
 
 
 ## Glossary

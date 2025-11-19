@@ -30,7 +30,7 @@ SELECT
 FROM
     staging.course_structure
 WHERE
-    week IN (47, 48, 49);
+    week BETWEEN 47 AND 49;
 
 --e) How many lectures are in the table?
 SELECT
