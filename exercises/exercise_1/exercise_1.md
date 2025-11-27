@@ -56,20 +56,34 @@ For this task you should use the same salaries data as in lecture 04 and 05. Cre
 These study questions are good to get an overview of how SQL and relational databases work.
 
 &nbsp; a) What are the main categories of SQL commands?
+DDL - Data Definition Language
+DML - Data Manipulation Language
+DCL - Data Control Language
+TCL - Transaction Control Language
+
 
 &nbsp; b) Explain the difference between HAVING and WHERE clauses?
+WHERE: filters rows before grouping 
+HAVING: filters groups after aggregation used wehn GROUP BY is present
 
 &nbsp; c) How to make sure you delete the correct rows?
+You always SELECT first to make sure you delete the correct thing
 
 &nbsp; d) How do you retrieve unique values in a column?
+you use DISTINCT to retrieve unique values
 
 &nbsp; e) What does data transformation mean?
+e.g when you want the salary in sek but the table has it in USD, you need to transform it.
 
 &nbsp; f) How do you create a new row in a table?
+INSERT INTO table(column1, column2)
+VALUES ('newdata', 69);
 
 &nbsp; g) What happens if you omit the WHERE clause in an UPDATE statement?
+if you dont use WHERE you will update all rows in the table
 
 &nbsp; h) What happens if you omit the WHERE clause in a DELETE statement?
+Then you will delete all rows in the table
 
 &nbsp; i) What is a conditional statement in SQL, and can it be used with SELECT?
 

@@ -463,5 +463,19 @@ SELECT
 FROM staging.salaries;
 
 --   g) Pick out a job title of interest and figure out if company size affects the salary. Make a simple analysis as a comprehensive one requires causality investigations which are much harder to find.
+SELECT
+    company_size,
+    MEDIAN(monthly_salary_in_sek) as median_salary
+FROM staging.salaries
+WHERE job_title LIKE 'Data Engineer'
+GROUP BY company_size;
 
+┌──────────────┬───────────────┐
+│ company_size │ median_salary │
+│   varchar    │    double     │
+├──────────────┼───────────────┤
+│ Large        │       95734.0 │
+│ Medium       │      111417.0 │
+│ Small        │       51729.0 │
+└──────────────┴───────────────┘
 --   h) Feel free to explore other things
