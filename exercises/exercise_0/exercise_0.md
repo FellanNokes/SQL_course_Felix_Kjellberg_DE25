@@ -95,7 +95,12 @@ These study questions are good to get an overview of how SQL and relational data
 
 &nbsp; a) What is SQL, and why is it important in relational databases?
 
+It's important to read, understand and manipulate databases
+
 &nbsp; b) Explain the difference between FROM and WHERE clauses.
+
+From is which table 
+WHERE can be a specific rows in a cloumn
 
 &nbsp; c) Explain the purpose of the LIMIT or OFFSET clause in a SQL query.
 
@@ -104,16 +109,27 @@ OFFSET will exclude amount of rows
 
 &nbsp; d) What are the primary functions of the Data Definition Language (DDL) in SQL?
 
+CREATE(create tables, views, columns)
+ALTER(change table structure, add/remove colums)
+DROP(delete tables, columns)
+
 &nbsp; e) Explain the differences between the Data Manipulation Language (DML) and Data Definition Language (DDL).
+
+DDL - is more on the grand scheme creating, altering, droping: tables, columns 
+DML - is more reading the data, inserting new rows, updating existing data deleting rows.
 
 &nbsp; f) What makes DuckDB unique compared to other databases?
 
+DuckDB is a serverless, in-process analytical database optimized for fast analytical queries on large datasets.
+
 &nbsp; g) Is DuckDB suitable for real-time data processing?
+
+No, DuckDB is optimized for batch analytics, not real-time or high-concurrency data processing.
 
 &nbsp; h) Difference between read_csv and read_csv_auto
 
-read_csv_auto automatically names the columns
-read_csv you select the columns
+read_csv_auto automatically detects the columns
+read_csv you need to specify column types and names
 
 
 ## Glossary
