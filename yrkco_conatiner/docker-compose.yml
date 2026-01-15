@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports: # port mapping between host machine and container
+      - "${POSTGRES_PORT}:5432"
+    volumes: # distinguish between named volumes and bind mounts
+      - postgres_data:/var/lib/postgresql #named volume for persiting data
+      - ./sql:/sql # bind mount for persisting data
+
+    healthcheck: # define a check after the container is up running
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 30s
+      
+
+volumes: #named volume (which can be seen under the Volume section of the GUI)
+  postgres_data:
